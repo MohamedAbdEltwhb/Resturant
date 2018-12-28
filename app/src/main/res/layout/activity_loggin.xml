@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity"
+    android:background="@drawable/loginbg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="88dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RESTURANT"
+            android:textColor="#ffffff"
+            android:textSize="31sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="9.2dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff" />
+
+        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginStart="8.5dp"
+            android:text="LOGIN"
+            android:textColor="#f05421"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <com.example.mm.resturant.customfonts.EditText_Roboto_Regular
+        android:id="@+id/email_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginTop="54.7dp"
+        android:background="#00000000"
+        android:hint="Username"
+        android:inputType="textEmailAddress"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="14.4sp"
+        android:drawableEnd="@drawable/ic_email"
+        android:drawableRight="@drawable/ic_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginTop="6.5dp"
+        android:background="#33ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_id" />
+
+
+    <com.example.mm.resturant.customfonts.EditText_Roboto_Regular
+        android:id="@+id/password_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginTop="33.6dp"
+        android:background="#00000000"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="14.4sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginTop="6.5dp"
+        android:background="#33ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_id" />
+
+
+    <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginTop="53.8dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center_horizontal"
+        android:padding="16.4dp"
+        android:text="LOGIN"
+        android:textColor="#ffffff"
+        android:textSize="13.3sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_id" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="33.6dp"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginStart="34.6dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:layout_gravity="center_vertical"/>
+
+        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+            android:id="@+id/myTextView_Roboto_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:text="Or"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:padding="5dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/sign_in_by_google_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="34.6dp"
+        android:layout_marginRight="33.6dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/google"
+        android:gravity="center_horizontal"
+        android:padding="16.4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_by_google_button">
+
+        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="#ffffff"
+            android:textSize="14.4sp" />
+
+        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+            android:id="@+id/signUp_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Sign Up"
+            android:textColor="#d22532"
+            android:textSize="14.4sp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
