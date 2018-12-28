@@ -1,6 +1,7 @@
 package com.example.mm.resturant.activities;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,11 +15,14 @@ import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferences
 public class FoodActivity extends AppCompatActivity {
 
     private SharedPreferencesStorage mSharedPreferencesStorage;
+    private ActionBar mBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
+        mBar = getSupportActionBar();
+        mBar.setTitle("");
         initObjects();
     }
 
