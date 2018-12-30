@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/plateImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:elevation="16dp"
+        android:src="@drawable/d"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold
+                android:id="@+id/textFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="110dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="110dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="KAMAAGE UDON"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="236dp"
+                android:layout_height="51dp"
+                android:layout_marginEnd="108dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="108dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textFoodName">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/minutesNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="12"
+                        android:textColor="#f8405d80"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="minutes"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/darker_gray"
+                    android:rotation="20"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/nutritionsNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="12"
+                        android:textColor="#f8405d80"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="nutritions"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:paddingBottom="16dp"
+        android:background="@drawable/card_radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal"
+           android:weightSum="2">
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="40dp"
+               android:layout_weight="1"
+               android:background="#fff"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:id="@+id/imageLikes"
+                   android:layout_width="24sp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/ic_favorite_grey" />
+
+               <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                   android:id="@+id/likesNumber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="112"
+                   android:textSize="10sp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginLeft="8dp"/>
+
+               <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Likes"
+                   android:textSize="10sp"
+                   android:layout_marginStart="2dp"
+                   android:layout_marginLeft="2dp"/>
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="40dp"
+               android:layout_weight="1"
+               android:background="#fff"
+               android:gravity="center"
+               android:orientation="horizontal">
+
+               <ImageView
+                   android:id="@+id/imageShare"
+                   android:layout_width="24sp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/ic_share_24dp" />
+
+               <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                   android:id="@+id/sharesNumber"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="112"
+                   android:textSize="10sp"
+                   android:layout_marginStart="8dp"
+                   android:layout_marginLeft="8dp"/>
+
+               <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Share"
+                   android:textSize="10sp"
+                   android:layout_marginStart="2dp"
+                   android:layout_marginLeft="2dp"/>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

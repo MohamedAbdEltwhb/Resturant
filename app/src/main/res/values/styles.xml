@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -15,12 +15,87 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="editTextRegister">
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:background">#00000000</item>
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:textColorHint">#ffffff</item>
-        <item name="android:textSize">14.4sp</item>
+    <!-- Login and Register Activities Maine Title >>> "Resturant". -->
+    <style name="LoginRegisterTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">31sp</item>
+        <item name="android:text">@string/resturant_title</item>
     </style>
+
+    <!-- Login and Register Activities View Between >>> Title & Sub Title. -->
+    <style name="LoginRegisterTitleView">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <!-- Login and Register Activities Sub Title >>> "LOG IN" $ "SIN UP". -->
+    <style name="LoginRegisterSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:textColor">@color/colorOrange</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!--Register Activity EditText Common Attributes-->
+    <style name="RegisterEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>
+
+    <!--Login Activity EditText Common Attributes-->
+    <style name="LoginEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+    </style>
+
+    <!--Register & Login Activities Common Attributes for Views below EditText -->
+    <style name="LoginRegisterViewsEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+
+    <!--Register & Login Activities Common Attributes for TextView Button >>> "Log In" & "Sign Up" -->
+    <style name="LoginRegisterTextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:background">@drawable/rectangle</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">16.4dp</item>
+    </style>
+
+    <style name="FoodCardViewStyles">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:rotation">45</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:adjustViewBounds">true</item>
+
+    </style>
+
+
+    
+    
 
 </resources>

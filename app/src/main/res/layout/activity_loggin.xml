@@ -21,45 +21,30 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RESTURANT"
-            android:textColor="#ffffff"
-            android:textSize="31sp" />
+            style="@style/LoginRegisterTitleText" />
 
         <View
-            android:layout_width="1dp"
-            android:layout_height="34dp"
+            style="@style/LoginRegisterTitleView"
             android:layout_marginLeft="9.2dp"
-            android:layout_marginTop="5dp"
-            android:background="#ffffff" />
+            android:layout_marginStart="9.2dp" />
 
         <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            style="@style/LoginRegisterSubTitle"
             android:layout_marginLeft="8.5dp"
             android:layout_marginStart="8.5dp"
-            android:text="LOGIN"
-            android:textColor="#f05421"
-            android:textSize="20sp" />
+            android:text="@string/sub_title_login" />
     </LinearLayout>
 
     <com.example.mm.resturant.customfonts.EditText_Roboto_Regular
+        style="@style/LoginEditText"
         android:id="@+id/email_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginLeft="34.6dp"
         android:layout_marginStart="34.6dp"
         android:layout_marginRight="33.6dp"
         android:layout_marginEnd="33.6dp"
         android:layout_marginTop="54.7dp"
-        android:background="#00000000"
-        android:hint="Username"
+        android:hint="@string/login_register_email_hint"
         android:inputType="textEmailAddress"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
-        android:textSize="14.4sp"
         android:drawableEnd="@drawable/ic_email"
         android:drawableRight="@drawable/ic_email"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,48 +53,39 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
+        style="@style/LoginRegisterViewsEditText"
         android:layout_marginLeft="34.6dp"
         android:layout_marginStart="34.6dp"
         android:layout_marginRight="33.6dp"
         android:layout_marginEnd="33.6dp"
         android:layout_marginTop="6.5dp"
-        android:background="#33ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_id" />
 
 
     <com.example.mm.resturant.customfonts.EditText_Roboto_Regular
+        style="@style/LoginEditText"
         android:id="@+id/password_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginLeft="34.6dp"
         android:layout_marginStart="34.6dp"
         android:layout_marginRight="33.6dp"
         android:layout_marginEnd="33.6dp"
         android:layout_marginTop="33.6dp"
-        android:background="#00000000"
-        android:hint="Password"
+        android:hint="@string/login_register_password_hint"
         android:inputType="textPassword"
-        android:textColor="#ffffff"
-        android:textColorHint="#ffffff"
-        android:textSize="14.4sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
+        style="@style/LoginRegisterViewsEditText"
         android:layout_marginEnd="33.6dp"
         android:layout_marginLeft="34.6dp"
         android:layout_marginRight="33.6dp"
         android:layout_marginStart="34.6dp"
         android:layout_marginTop="6.5dp"
-        android:background="#33ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,19 +94,13 @@
 
     <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
         android:id="@+id/sign_in_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/LoginRegisterTextButton"
         android:layout_marginEnd="33.6dp"
         android:layout_marginLeft="34.6dp"
         android:layout_marginRight="33.6dp"
         android:layout_marginStart="34.6dp"
         android:layout_marginTop="53.8dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center_horizontal"
-        android:padding="16.4dp"
-        android:text="LOGIN"
-        android:textColor="#ffffff"
-        android:textSize="13.3sp"
+        android:text="@string/login_log_in_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_id" />

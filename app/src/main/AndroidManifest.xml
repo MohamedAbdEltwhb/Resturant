@@ -22,8 +22,10 @@
         <activity
             android:name=".activities.SignUpActivity"
             android:theme="@style/NAppTheme" />
-        <activity android:name=".activities.FoodActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities.FoodActivity"
+            android:theme="@style/NAppTheme" />
+        <activity android:name=".activities.RecipeActivity"></activity>
     </application>
 
 </manifest>

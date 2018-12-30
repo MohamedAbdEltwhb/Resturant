@@ -7,27 +7,26 @@
     android:background="@drawable/homebg"
     tools:context=".activities.FoodActivity">
 
+    <include
+        android:id="@+id/food_toolbar"
+        layout="@layout/food_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerVertical="true"
+        android:id="@+id/cardView_recipe"
+        style="@style/FoodCardViewStyles"
         android:layout_marginBottom="54dp"
         android:layout_marginLeft="112dp"
         android:layout_marginStart="112dp"
         android:layout_marginTop="74dp"
-        android:adjustViewBounds="true"
-        android:background="#fff"
-        android:clickable="true"
-        android:orientation="vertical"
-        android:rotation="45"
-        android:visibility="visible"
-        app:cardElevation="4dp"
         app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/food_toolbar">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -66,26 +65,18 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerVertical="true"
+        android:id="@+id/cardView_lunch"
+        style="@style/FoodCardViewStyles"
         android:layout_marginBottom="54dp"
         android:layout_marginLeft="65dp"
         android:layout_marginStart="65dp"
         android:layout_marginTop="151dp"
-        android:adjustViewBounds="true"
-        android:background="#fff"
-        android:clickable="true"
-        app:cardElevation="4dp"
-        android:orientation="vertical"
-        android:rotation="45"
-        android:visibility="visible"
         app:cardCornerRadius="5dp"
+        app:cardElevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView3"
-        app:layout_constraintEnd_toStartOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/cardView_recipe"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/food_toolbar">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -110,7 +101,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginStart="30dp"
                 android:rotation="-45"
-                android:text="Trending"
+                android:text="Lunch"
                 android:textColor="#535353"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -125,21 +116,13 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerVertical="true"
+        style="@style/FoodCardViewStyles"
         android:layout_marginTop="54dp"
-        android:adjustViewBounds="true"
-        android:background="#fff"
-        android:clickable="true"
-        android:orientation="vertical"
-        android:rotation="45"
-        android:visibility="visible"
         app:cardElevation="4dp"
         app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView">
+        app:layout_constraintEnd_toEndOf="@+id/cardView_recipe"
+        app:layout_constraintStart_toStartOf="@+id/cardView_recipe"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_recipe">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -180,21 +163,13 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerVertical="true"
+        style="@style/FoodCardViewStyles"
         android:layout_marginTop="54dp"
-        android:adjustViewBounds="true"
-        android:background="#fff"
-        android:clickable="true"
-        android:orientation="vertical"
-        android:rotation="45"
-        android:visibility="visible"
         app:cardElevation="4dp"
         app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView1"
-        app:layout_constraintStart_toStartOf="@+id/cardView1"
-        app:layout_constraintTop_toBottomOf="@+id/cardView1">
+        app:layout_constraintEnd_toEndOf="@+id/cardView_lunch"
+        app:layout_constraintStart_toStartOf="@+id/cardView_lunch"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_lunch">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"

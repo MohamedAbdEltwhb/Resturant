@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Resturant</string>
+
+    <!--Register & Login Title and Sub Title-->
+    <string name="resturant_title">RESTURANT</string>
+    <string name="sub_title_sign_up">SIGN UP</string>
+    <string name="sub_title_login">LOGIN</string>
+
+    <!--Register & Login EditText hint-->
+    <string name="register_f_name_hint">F - name</string>
+    <string name="register_l_name_hint">L-name</string>
+    <string name="login_register_email_hint">Email</string>
+    <string name="login_register_password_hint">Password</string>
+    <string name="register_re_password_hint">Re-Password</string>
+    <string name="register_phone_number_hint">PhoneNumber</string>
+
+    <!--Register & Login Buttons-->
+    <string name="register_sign_up_button">SIGN UP</string>
+    <string name="login_log_in_button">LOG IN</string>
 </resources>

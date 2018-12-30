@@ -1,28 +1,36 @@
 package com.example.mm.resturant.activities;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.mm.resturant.R;
-import com.example.mm.resturant.Util.InputValidation;
-import com.example.mm.resturant.models.SQLiteHelper.DataBaseHelper;
 import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferencesStorage;
 
-public class FoodActivity extends AppCompatActivity {
+public class FoodActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private CardView mRecipeCardView;
 
     private SharedPreferencesStorage mSharedPreferencesStorage;
-    private ActionBar mBar;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        mBar = getSupportActionBar();
-        mBar.setTitle("");
+
+        mToolbar = findViewById(R.id.food_toolbar);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
+
+        mRecipeCardView = findViewById(R.id.cardView_recipe);
+        mRecipeCardView.setOnClickListener(this);
+
         initObjects();
     }
 
@@ -65,5 +73,16 @@ public class FoodActivity extends AppCompatActivity {
     private void initObjects(){
         mSharedPreferencesStorage = new SharedPreferencesStorage(FoodActivity.this);
     }
+
+    @Override
+    public void onClick(View v) {
+        int getId = v.getId();
+        switch (getId){
+            case R.id.cardView_recipe:
+                startActivity(new Intent(this, RecipeActivity.class));
+                break;
+        }
+    }
+
 
 }

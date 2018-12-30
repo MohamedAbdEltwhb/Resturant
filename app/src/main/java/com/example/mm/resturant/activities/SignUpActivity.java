@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mm.resturant.R;
@@ -16,6 +18,7 @@ import com.example.mm.resturant.models.data.UserInfo;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ImageButton mBackImageButton;
     private MyTextView_Roboto_Regular mSignUpButton;
     private EditText mFirstName, mLastName,mPassword, mRe_password, mEmail, mPhoneN;
 
@@ -36,6 +39,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         int getId = v.getId();
         switch (getId) {
+            case R.id.image_button_back:
+                startActivity(new Intent(this, LoginActivity.class));
+                break;
+
             case R.id.sign_Un_button:
                 connectAndStoreData();
                 break;
@@ -99,6 +106,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void initViews() {
+        mBackImageButton = findViewById(R.id.image_button_back);
+
         mFirstName = findViewById(R.id.f_name_id);
         mLastName = findViewById(R.id.l_name_id);
         mPassword = findViewById(R.id.password_id);
@@ -111,6 +120,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     private void initListeners(){
         mSignUpButton.setOnClickListener(this);
+        mBackImageButton.setOnClickListener(this);
     }
 
     private void emptyInputEditText(){
