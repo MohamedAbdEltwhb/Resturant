@@ -4,16 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mm.resturant.R;
 import com.example.mm.resturant.Util.InputValidation;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular;
-import com.example.mm.resturant.models.SQLiteHelper.DataBaseHelper;
+import com.example.mm.resturant.models.SQLiteHelper.UserTable.DataBaseHelper;
 import com.example.mm.resturant.models.data.UserInfo;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{

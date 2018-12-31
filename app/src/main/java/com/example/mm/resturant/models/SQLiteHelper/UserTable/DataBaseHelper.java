@@ -1,4 +1,4 @@
-package com.example.mm.resturant.models.SQLiteHelper;
+package com.example.mm.resturant.models.SQLiteHelper.UserTable;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,17 +6,18 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants;
 import com.example.mm.resturant.models.data.UserInfo;
 
 
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.EMAIL_6;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.FIRSTNAME_2;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.ID_1;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.LASTNAME_3;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.PASSWORD_4;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.PHONE_7;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.RE_PASSWORD_5;
-import static com.example.mm.resturant.models.SQLiteHelper.Constants.TABLE_NAME;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.EMAIL_6;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.FIRSTNAME_2;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.ID_1;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.LASTNAME_3;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.PASSWORD_4;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.PHONE_7;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.RE_PASSWORD_5;
+import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.TABLE_NAME;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 

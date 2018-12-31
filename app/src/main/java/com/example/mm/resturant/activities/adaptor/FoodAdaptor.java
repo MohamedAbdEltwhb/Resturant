@@ -15,12 +15,12 @@ import com.example.mm.resturant.models.data.RecipeInfo;
 
 import java.util.List;
 
-public class RecipeAdaptor  extends RecyclerView.Adapter<RecipeAdaptor.ViewHolder>{
+public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
 
     private Context mContext;
     private List<RecipeInfo> mRecipeInfo;
 
-    public RecipeAdaptor(Context mContext, List<RecipeInfo> mRecipeInfo) {
+    public FoodAdaptor(Context mContext, List<RecipeInfo> mRecipeInfo) {
         this.mContext = mContext;
         this.mRecipeInfo = mRecipeInfo;
     }

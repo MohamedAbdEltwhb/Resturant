@@ -82,6 +82,7 @@
         <item name="android:padding">16.4dp</item>
     </style>
 
+    <!--Food Activity CardView Styles-->
     <style name="FoodCardViewStyles">
         <item name="android:layout_width">100dp</item>
         <item name="android:layout_height">100dp</item>
@@ -91,7 +92,15 @@
         <item name="android:rotation">45</item>
         <item name="android:visibility">visible</item>
         <item name="android:adjustViewBounds">true</item>
+    </style>
 
+    <!--Food Activity TextView Styles-->
+    <style name="FoodTextViewStyles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:rotation">-45</item>
+        <item name="android:textColor">@color/colorDarkGray</item>
     </style>
 
 

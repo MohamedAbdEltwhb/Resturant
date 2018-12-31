@@ -1,4 +1,4 @@
-package com.example.mm.resturant.models.SQLiteHelper;
+package com.example.mm.resturant.models.SQLiteHelper.UserTable;
 
 public abstract class Constants {
 

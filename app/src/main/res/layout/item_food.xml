@@ -189,7 +189,7 @@
                    android:id="@+id/imageLikes"
                    android:layout_width="24sp"
                    android:layout_height="24dp"
-                   android:src="@drawable/ic_favorite_grey" />
+                   app:srcCompat="@drawable/ic_favorite_grey" />
 
                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
                    android:id="@+id/likesNumber"
@@ -223,7 +223,7 @@
                    android:id="@+id/imageShare"
                    android:layout_width="24sp"
                    android:layout_height="24dp"
-                   android:src="@drawable/ic_share_24dp" />
+                   app:srcCompat="@drawable/ic_share_24dp" />
 
                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
                    android:id="@+id/sharesNumber"

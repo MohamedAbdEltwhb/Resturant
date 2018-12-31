@@ -4,208 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homebg"
+    android:background="@color/colorPrimary"
     tools:context=".activities.FoodActivity">
 
-    <include
-        android:id="@+id/food_toolbar"
-        layout="@layout/food_toolbar"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView_recipe"
-        style="@style/FoodCardViewStyles"
-        android:layout_marginBottom="54dp"
-        android:layout_marginLeft="112dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="74dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/colorOrange"
+        app:itemTextColor="#F05421"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_toolbar">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="3dp"
-                android:rotation="-45"
-                android:src="@drawable/ic_food"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:rotation="-45"
-                android:text="My Recipe"
-                android:textColor="#535353"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView_lunch"
-        style="@style/FoodCardViewStyles"
-        android:layout_marginBottom="54dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="151dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView3"
-        app:layout_constraintEnd_toStartOf="@+id/cardView_recipe"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/food_toolbar">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="3dp"
-                android:rotation="-45"
-                android:src="@drawable/ic_chair"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:rotation="-45"
-                android:text="Lunch"
-                android:textColor="#535353"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView2"
-        style="@style/FoodCardViewStyles"
-        android:layout_marginTop="54dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView_recipe"
-        app:layout_constraintStart_toStartOf="@+id/cardView_recipe"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_recipe">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="3dp"
-                android:padding="4dp"
-                android:rotation="-45"
-                android:src="@drawable/ic_menu"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:rotation="-45"
-                android:text="My Recipe"
-                android:textColor="#535353"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView3"
-        style="@style/FoodCardViewStyles"
-        android:layout_marginTop="54dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView_lunch"
-        app:layout_constraintStart_toStartOf="@+id/cardView_lunch"
-        app:layout_constraintTop_toBottomOf="@+id/cardView_lunch">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:layout_marginLeft="2dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="3dp"
-                android:rotation="-45"
-                android:src="@drawable/ic_coffee_cup"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginStart="30dp"
-                android:rotation="-45"
-                android:text="My Recipe"
-                android:textColor="#535353"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-
-        </android.support.constraint.ConstraintLayout>
-
-
-    </android.support.v7.widget.CardView>
-
+        app:menu="@menu/bottom_navigation" />
 
 </android.support.constraint.ConstraintLayout>

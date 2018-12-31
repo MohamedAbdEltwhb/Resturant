@@ -1,88 +1,56 @@
 package com.example.mm.resturant.activities;
 
-import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.example.mm.resturant.R;
-import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferencesStorage;
+import com.example.mm.resturant.frafments.BreakfastFragment;
+import com.example.mm.resturant.frafments.DinnerFragment;
+import com.example.mm.resturant.frafments.LunchFragment;
 
-public class FoodActivity extends AppCompatActivity implements View.OnClickListener{
-
-    private CardView mRecipeCardView;
-
-    private SharedPreferencesStorage mSharedPreferencesStorage;
-    private Toolbar mToolbar;
+public class FoodActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
 
-        mToolbar = findViewById(R.id.food_toolbar);
-        mToolbar.setTitle("");
-        setSupportActionBar(mToolbar);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        mRecipeCardView = findViewById(R.id.cardView_recipe);
-        mRecipeCardView.setOnClickListener(this);
-
-        initObjects();
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        moveTaskToBack(true);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_food, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int getId = item.getItemId();
-        switch (getId){
-            case R.id.logout:
-                userLogout();
-            break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void userLogout() {
-        mSharedPreferencesStorage.putEmail(null);
-        mSharedPreferencesStorage.putPassword(null);
-
-        Intent toLogin = new Intent(this, LoginActivity.class);
-        toLogin.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        toLogin.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        startActivity(toLogin);
-        finish();
-    }
-
-    private void initObjects(){
-        mSharedPreferencesStorage = new SharedPreferencesStorage(FoodActivity.this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        int getId = v.getId();
-        switch (getId){
-            case R.id.cardView_recipe:
-                startActivity(new Intent(this, RecipeActivity.class));
-                break;
+        //I added this if statement to keep the selected fragment when rotating the device
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new BreakfastFragment()).commit();
         }
     }
 
 
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()) {
+                        case R.id.nav_breakfast:
+                            selectedFragment = new BreakfastFragment();
+                            break;
+                        case R.id.nav_lunch:
+                            selectedFragment = new LunchFragment();
+                            break;
+                        case R.id.nav_dinner:
+                            selectedFragment = new DinnerFragment();
+                            break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
 }

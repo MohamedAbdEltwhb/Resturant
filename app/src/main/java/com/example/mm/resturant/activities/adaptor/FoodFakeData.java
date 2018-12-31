@@ -6,7 +6,7 @@ import com.example.mm.resturant.models.data.RecipeInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeFakeData {
+public class FoodFakeData {
 
     private static final List<RecipeInfo> mRecipeFakeData = new ArrayList<RecipeInfo>(){{
 
