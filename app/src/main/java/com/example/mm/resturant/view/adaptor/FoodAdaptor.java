@@ -1,7 +1,10 @@
-package com.example.mm.resturant.activities.adaptor;
+package com.example.mm.resturant.view.adaptor;
 
+import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.graphics.drawable.ArgbEvaluator;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,16 +14,19 @@ import android.widget.ImageView;
 import com.example.mm.resturant.R;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular;
-import com.example.mm.resturant.models.data.RecipeInfo;
+import com.example.mm.resturant.models.data.FoodInfo;
 
 import java.util.List;
 
 public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
 
     private Context mContext;
-    private List<RecipeInfo> mRecipeInfo;
+    private List<FoodInfo> mRecipeInfo;
 
-    public FoodAdaptor(Context mContext, List<RecipeInfo> mRecipeInfo) {
+    public static int mQuantity = 0;
+
+
+    public FoodAdaptor(Context mContext, List<FoodInfo> mRecipeInfo) {
         this.mContext = mContext;
         this.mRecipeInfo = mRecipeInfo;
     }
@@ -33,8 +39,8 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        RecipeInfo recipeInfo = mRecipeInfo.get(position);
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+        final FoodInfo recipeInfo = mRecipeInfo.get(position);
 
         holder.textFoodName.setText(String.valueOf(recipeInfo.getFoodName()));
         holder.minutesNumber.setText(String.valueOf(recipeInfo.getMinutesNumber()));
@@ -43,12 +49,33 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
         holder.sharesNumber.setText(String.valueOf(recipeInfo.getSharesNumber()));
 
         holder.plateImageView.setImageResource(recipeInfo.getPlateImage());
-        holder.imageLikes.setImageResource(recipeInfo.getImageLikes());
 
+        holder.imageLikes.setImageResource(R.drawable.ic_favorite_grey);
 
-//        Glide.with(mContext).load(recipeInfo.getPlateImage()).into(holder.plateImageView);
-//        Glide.with(mContext).load(recipeInfo.getImageLikes()).into(holder.imageLikes);
+        holder.imageLikes.setOnClickListener(new View.OnClickListener() {
+            ValueAnimator buttonColorAnim = null; // to hold the button animator
 
+            @SuppressLint("RestrictedApi")
+            @Override
+            public void onClick(View v) {
+
+                if(buttonColorAnim != null){
+                    buttonColorAnim.reverse();
+                    buttonColorAnim = null;
+                }
+                else {
+                    final ImageView button = (ImageView) v;
+                    buttonColorAnim = ValueAnimator.ofObject(new ArgbEvaluator(), R.drawable.ic_favorite_grey, R.drawable.ic_favorite_red);
+                    buttonColorAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                        @Override
+                        public void onAnimationUpdate(ValueAnimator animator) {
+                            button.setImageResource((Integer) animator.getAnimatedValue());
+                        }
+                    });
+                    buttonColorAnim.start();
+                }
+            }
+        });
     }
 
     @Override

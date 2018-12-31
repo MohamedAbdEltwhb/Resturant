@@ -19,4 +19,7 @@
 
     <color name="colorDarkGray">#535353</color>
 
+    <color name="gray">#eaeaea</color>
+    <color name="red">#f00808</color>
+
 </resources>

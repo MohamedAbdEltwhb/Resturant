@@ -1,4 +1,4 @@
-package com.example.mm.resturant.activities;
+package com.example.mm.resturant.view.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.mm.resturant.R;
-import com.example.mm.resturant.frafments.BreakfastFragment;
-import com.example.mm.resturant.frafments.DinnerFragment;
-import com.example.mm.resturant.frafments.LunchFragment;
+import com.example.mm.resturant.view.frafments.BreakfastFragment;
+import com.example.mm.resturant.view.frafments.DinnerFragment;
+import com.example.mm.resturant.view.frafments.LunchFragment;
 
 public class FoodActivity extends AppCompatActivity {
 

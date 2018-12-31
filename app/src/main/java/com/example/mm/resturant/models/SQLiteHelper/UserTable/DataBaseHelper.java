@@ -36,6 +36,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL(Constants.DROP_USER_TABLE);
         onCreate(db);
     }
+
     public Long addNweUser(UserInfo user){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

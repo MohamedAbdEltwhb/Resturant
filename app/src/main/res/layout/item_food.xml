@@ -189,7 +189,7 @@
                    android:id="@+id/imageLikes"
                    android:layout_width="24sp"
                    android:layout_height="24dp"
-                   app:srcCompat="@drawable/ic_favorite_grey" />
+                   android:background="@drawable/ic_favorite_grey" />
 
                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
                    android:id="@+id/likesNumber"

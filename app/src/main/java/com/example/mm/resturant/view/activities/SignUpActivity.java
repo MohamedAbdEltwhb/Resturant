@@ -1,4 +1,4 @@
-package com.example.mm.resturant.activities;
+package com.example.mm.resturant.view.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

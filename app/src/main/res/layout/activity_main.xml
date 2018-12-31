@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/homebg"
-    tools:context=".activities.MainActivity">
+    tools:context=".view.activities.MainActivity">
 
     <include
         android:id="@+id/food_toolbar"
@@ -94,7 +94,7 @@
                 style="@style/FoodTextViewStyles"
                 android:layout_marginLeft="30dp"
                 android:layout_marginStart="30dp"
-                android:text="Lunch"
+                android:text="Waitlistes"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView1" />
@@ -179,7 +179,7 @@
                 style="@style/FoodTextViewStyles"
                 android:layout_marginLeft="30dp"
                 android:layout_marginStart="30dp"
-                android:text="My Recipe"
+                android:text="Drinks"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />

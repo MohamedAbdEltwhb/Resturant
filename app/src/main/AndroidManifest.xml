@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/NAppTheme">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".view.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,16 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
+            android:name=".view.activities.LoginActivity"
             android:theme="@style/NAppTheme" />
         <activity
-            android:name=".activities.SignUpActivity"
+            android:name=".view.activities.SignUpActivity"
             android:theme="@style/NAppTheme" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".view.activities.MainActivity"
             android:theme="@style/NAppTheme" />
-        <activity android:name=".activities.FoodActivity" />
-        <activity android:name=".activities.WaitlistesTableActivity"></activity>
+        <activity android:name=".view.activities.FoodActivity" />
+        <activity android:name=".view.activities.WaitlistesTableActivity" />
+        <activity android:name=".view.activities.DrinksActivity" />
+        <activity android:name=".view.activities.DetailsFoodActivity"></activity>
     </application>
 
 </manifest>

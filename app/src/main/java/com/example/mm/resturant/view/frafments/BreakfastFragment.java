@@ -1,4 +1,4 @@
-package com.example.mm.resturant.frafments;
+package com.example.mm.resturant.view.frafments;
 
 
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.mm.resturant.R;
-import com.example.mm.resturant.activities.adaptor.FoodAdaptor;
-import com.example.mm.resturant.activities.adaptor.FoodFakeData;
+import com.example.mm.resturant.view.adaptor.FoodAdaptor;
+import com.example.mm.resturant.view.adaptor.FoodFakeData;
 
 /**
  * A simple {@link Fragment} subclass.

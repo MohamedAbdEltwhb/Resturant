@@ -1,4 +1,4 @@
-package com.example.mm.resturant.activities.adaptor;
+package com.example.mm.resturant.view.adaptor;
 
 import android.content.Context;
 import android.database.Cursor;
