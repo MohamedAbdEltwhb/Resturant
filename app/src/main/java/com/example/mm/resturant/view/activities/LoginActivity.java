@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     GoogleSignInClient mGoogleSignInClient;
 
     private EditText mEditTextEmail, mEditTextPassword;
-    private MyTextView_Roboto_Regular mLoginButton;
+    private MyTextView_Roboto_Regular mLoginButton, mForgotLink;
     private MyTextView_Roboto_Regular mSignLink;
 
     private InputValidation mInputValidation;
@@ -129,6 +129,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.signUp_link:
                 startActivity(new Intent(this, SignUpActivity.class));
                 break;
+
+            case R.id.forgotLink:
+                startActivity(new Intent(this, ForgotPasswordActivity.class));
+                break;
         }
 
     }
@@ -182,11 +186,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mEditTextEmail = findViewById(R.id.email_id);
         mLoginButton = findViewById(R.id.sign_in_button);
         mSignLink = findViewById(R.id.signUp_link);
+        mForgotLink = findViewById(R.id.forgotLink);
     }
 
     private void initListeners(){
         mLoginButton.setOnClickListener(this);
         mSignLink.setOnClickListener(this);
+        mForgotLink.setOnClickListener(this);
     }
 
     private void emptyInputEditText(){

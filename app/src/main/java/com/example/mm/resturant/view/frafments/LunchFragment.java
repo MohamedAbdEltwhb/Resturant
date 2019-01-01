@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.mm.resturant.R;
 import com.example.mm.resturant.view.adaptor.FoodAdaptor;
 import com.example.mm.resturant.view.adaptor.FoodFakeData;
+import com.example.mm.resturant.view.adaptor.OnFoodAdaptorClickListener;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -28,7 +28,9 @@
         <activity android:name=".view.activities.FoodActivity" />
         <activity android:name=".view.activities.WaitlistesTableActivity" />
         <activity android:name=".view.activities.DrinksActivity" />
-        <activity android:name=".view.activities.DetailsFoodActivity"></activity>
+        <activity android:name=".view.activities.DetailsFoodActivity" />
+        <activity android:name=".view.activities.ForgotPasswordActivity" />
+        <activity android:name=".view.activities.ConfirmPassword"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@ import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferences
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private CardView mRecipeCardView, mWaitlistesCardView;
+    private CardView mRecipeCardView, mWaitlistesCardView, mDrinksCardView;
     private TextView mToolbarText;
     private SharedPreferencesStorage mSharedPreferencesStorage;
     private Toolbar mToolbar;
@@ -77,8 +77,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.cardView_recipe:
                 startActivity(new Intent(this, FoodActivity.class));
                 break;
+
             case R.id.cardView_lunch:
                 startActivity(new Intent(this, WaitlistesTableActivity.class));
+                break;
+
+            case R.id.cardView3:
+                startActivity(new Intent(this, DrinksActivity.class));
                 break;
         }
     }
@@ -92,11 +97,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mToolbarText = mToolbar.findViewById(R.id.textToolbar);
         mRecipeCardView = findViewById(R.id.cardView_recipe);
         mWaitlistesCardView = findViewById(R.id.cardView_lunch);
+        mDrinksCardView = findViewById(R.id.cardView3);
     }
 
     private void initListeners(){
         mRecipeCardView.setOnClickListener(this);
         mWaitlistesCardView.setOnClickListener(this);
+        mDrinksCardView.setOnClickListener(this);
     }
 
 }
