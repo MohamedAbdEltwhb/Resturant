@@ -26,4 +26,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="forgot_password_description">We just need your registered Email ..</string>
+
+    <string name="food_description">The flavor of your food is what most customers focus on when they are deciding what to eat.
+        How you present the dishes on your menu can help build anticipation,
+        and a good menu description could even convince a hesitant customer to try something new.</string>
 </resources>

@@ -37,6 +37,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_chef" />
 
+
     </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:srcCompat="@drawable/ic_chevron_left"
+        android:visibility="invisible"/>
 
 </android.support.v7.widget.Toolbar>

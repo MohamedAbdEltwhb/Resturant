@@ -3,21 +3,25 @@ package com.example.mm.resturant.models.data;
 public final class FoodInfo {
 
     private String FoodName;
-    private int plateImage,
-                minutesNumber,
-                nutritionsNumber,
-                likesNumber,
-                sharesNumber;
+    private int plateImage;
+
+
+    private int minutesNumber;
+    private int nutritionsNumber;
+    private int likesNumber;
+    private int sharesNumber;
+    private int prise;
 
     public FoodInfo(String foodName, int plateImage, int minutesNumber,
                     int nutritionsNumber,
-                    int likesNumber, int sharesNumber) {
+                    int likesNumber, int sharesNumber, int prise) {
         FoodName = foodName;
         this.plateImage = plateImage;
         this.minutesNumber = minutesNumber;
         this.nutritionsNumber = nutritionsNumber;
         this.likesNumber = likesNumber;
         this.sharesNumber = sharesNumber;
+        this.prise = prise;
     }
 
     public String getFoodName() {
@@ -42,5 +46,10 @@ public final class FoodInfo {
 
     public int getSharesNumber() {
         return sharesNumber;
+    }
+
+
+    public int getPrise() {
+        return prise;
     }
 }

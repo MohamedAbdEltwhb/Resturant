@@ -41,57 +41,205 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/plateImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="32dp"
-                    android:background="@drawable/d"
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
-                    android:id="@+id/textFoodName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="8dp"
-                    android:text="TextView"
-                    android:textSize="22sp"
-                    android:textColor="@android:color/holo_orange_dark"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/plateImageView"
-                    tools:ignore="MissingConstraints" />
 
-                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
-                    android:id="@+id/myTextView_Roboto_Regular2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="minutes: "
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textFoodName" />
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
-                    android:id="@+id/minutesNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text=" 0 "
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp"
-                    app:layout_constraintStart_toEndOf="@+id/myTextView_Roboto_Regular2"
-                    app:layout_constraintTop_toTopOf="@+id/myTextView_Roboto_Regular2" />
+                        <ImageView
+                            android:id="@+id/plateImageView"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/d"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/textFoodName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="8dp"
+                            android:text="TextView"
+                            android:textSize="22sp"
+                            android:textColor="@android:color/holo_orange_dark"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/plateImageView"
+                            tools:ignore="MissingConstraints" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/myTextView_Roboto_Regular2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Minutes"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/foodDescription" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/detailsMinutesNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text=" 0 "
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="@+id/myTextView_Roboto_Regular2"
+                            app:layout_constraintStart_toStartOf="@+id/myTextView_Roboto_Regular2"
+                            app:layout_constraintTop_toBottomOf="@+id/myTextView_Roboto_Regular2"
+                            tools:ignore="MissingConstraints" />
+
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/quantity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="Quantity"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/myTextView_Roboto_Regular2" />
+
+                        <Button
+                            android:id="@+id/inCrement"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/sptn"
+                            android:text="+"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/quantity_text" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold
+                            android:id="@+id/quantity_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="20dp"
+                            android:text="0"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toStartOf="@+id/deCrement"
+                            app:layout_constraintStart_toEndOf="@+id/inCrement"
+                            app:layout_constraintTop_toBottomOf="@+id/quantity_text" />
+
+                        <Button
+                            android:id="@+id/deCrement"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="100dp"
+                            android:layout_marginRight="100dp"
+                            android:background="@drawable/sptn"
+                            android:text="-"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/inCrement"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/add_to_order_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginEnd="33.6dp"
+                            android:layout_marginLeft="34.6dp"
+                            android:layout_marginRight="33.6dp"
+                            android:layout_marginStart="34.6dp"
+                            android:layout_marginTop="53.8dp"
+                            android:background="@drawable/add_new_arder_button"
+                            android:drawableLeft="@drawable/ic_add_circle_outline"
+                            android:drawablePadding="5dp"
+                            android:drawableStart="@drawable/ic_add_circle_outline"
+                            android:gravity="center_horizontal"
+                            android:padding="16.4dp"
+                            android:text="add to Order"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="@color/colorWhite"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/deCrement" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="35dp"
+                            android:layout_marginRight="35dp"
+                            android:text="Price"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/myTextView_Roboto_Regular2" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/priseNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text=" 0 "
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="@+id/textView2"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                        <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
+                            android:id="@+id/foodDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="33.6dp"
+                            android:layout_marginLeft="34.6dp"
+                            android:layout_marginRight="33.6dp"
+                            android:layout_marginStart="34.6dp"
+                            android:layout_marginTop="8dp"
+                            android:maxLines="10"
+                            android:text="@string/food_description"
+                            android:textColor="@color/colorCWhite"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textFoodName" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </ScrollView>
+
             </android.support.constraint.ConstraintLayout>
 
-
         </android.support.constraint.ConstraintLayout>
-
 
 </android.support.constraint.ConstraintLayout>

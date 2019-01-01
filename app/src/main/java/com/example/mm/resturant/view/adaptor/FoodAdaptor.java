@@ -28,6 +28,7 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
     public static final String TEXT_FOOD_NAME = "textFoodName";
     public static final String MINUTES_NUMBER = "minutesNumber";
     public static final String PLATE_IMAGE_VIEW = "plateImageView";
+    public static final String PRISE = "prise";
 
     private Context mContext;
     private List<FoodInfo> mRecipeInfo;
@@ -137,8 +138,9 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
             Intent intent = new Intent(mContext, DetailsFoodActivity.class);
 
             intent.putExtra(TEXT_FOOD_NAME, mFoodInfo.getFoodName());
-            intent.putExtra(MINUTES_NUMBER, mFoodInfo.getMinutesNumber());
+            intent.putExtra(MINUTES_NUMBER, String.valueOf(mFoodInfo.getMinutesNumber()));
             intent.putExtra(PLATE_IMAGE_VIEW, mFoodInfo.getPlateImage());
+            intent.putExtra(PRISE, String.valueOf(mFoodInfo.getPrise()));
 
             mContext.startActivity(intent);
 
