@@ -14,8 +14,8 @@ import com.example.mm.resturant.models.SQLiteHelper.WaitlistesTable.WaitlistCont
 
 public class WaitlistAdapter extends RecyclerView.Adapter<WaitlistAdapter.Guestviewholder>{
 
-    Context mContext;
-    Cursor mCursor;
+    private Context mContext;
+    private Cursor mCursor;
 
     public WaitlistAdapter(Context mContext, Cursor mCursor) {
         this.mContext = mContext;

@@ -13,6 +13,8 @@
 
     <color name="colorCWhite">#a8dcdcdc</color>
 
+    <color name="colorToolBar">#545e5e</color>
+
     <color name="colorOrange">#f05421</color>
 
     <color name="colorGray">#33ffffff</color>
@@ -20,6 +22,7 @@
     <color name="colorDarkGray">#535353</color>
 
     <color name="gray">#eaeaea</color>
+
     <color name="red">#f00808</color>
 
 </resources>

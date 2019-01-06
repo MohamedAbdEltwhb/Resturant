@@ -1,6 +1,7 @@
 package com.example.mm.resturant.view.activities;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -14,6 +15,8 @@ import com.bumptech.glide.Glide;
 import com.example.mm.resturant.R;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Bold;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular;
+import com.example.mm.resturant.models.SQLiteHelper.UserTable.DataBaseHelper;
+import com.example.mm.resturant.models.sharedpreferenceshelber.OrderStorage;
 
 import static com.example.mm.resturant.view.adaptor.FoodAdaptor.MINUTES_NUMBER;
 import static com.example.mm.resturant.view.adaptor.FoodAdaptor.PLATE_IMAGE_VIEW;
@@ -35,10 +38,15 @@ public class DetailsFoodActivity extends AppCompatActivity implements View.OnCli
     private TextView mAddToOrderButton;
     private ImageView mBack;
 
+    private OrderStorage mOrderStorage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_food);
+
+        mOrderStorage = new OrderStorage(this);
+
         initViews();
         initListeners();
 
@@ -101,6 +109,7 @@ public class DetailsFoodActivity extends AppCompatActivity implements View.OnCli
                 break;
 
             case R.id.add_to_order_button:
+
                 break;
         }
     }

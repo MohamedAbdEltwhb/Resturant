@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        android:text="Resturant" />
+        android:text="@string/aplash_resturant_txt" />
 
     <com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/colorCWhite"
-        android:text="Welcome to Resturant Application."
+        android:text="@string/splash_"
         android:textAppearance="?android:textAppearanceLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

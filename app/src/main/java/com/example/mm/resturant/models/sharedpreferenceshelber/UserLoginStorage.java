@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class SharedPreferencesStorage {
+public class UserLoginStorage {
 
     public static final String MY_PREFS = "MY_PREFS";
 
@@ -22,7 +22,7 @@ public class SharedPreferencesStorage {
 
     SharedPreferences mSharedPreferences;
 
-    public SharedPreferencesStorage(Context context) {
+    public UserLoginStorage(Context context) {
         mSharedPreferences = context.getSharedPreferences(MY_PREFS, MODE_PRIVATE);
     }
 
@@ -45,6 +45,8 @@ public class SharedPreferencesStorage {
     public String getPassword() {
         return mSharedPreferences.getString(KEY_PASSWORD, null);
     }
+
+
 
 
 

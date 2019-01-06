@@ -78,9 +78,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             String _mEmail = mEmail.getText().toString().trim();
             String _mPhoneN = mPhoneN.getText().toString().trim();
 
-//            SharedPreferencesStorage.saveFirstName(_mFirstName, this);
-//            SharedPreferencesStorage.saveLastName(_mLastName, this);
-//            SharedPreferencesStorage.savePhone(_mPhoneN, this);
+//            UserLoginStorage.saveFirstName(_mFirstName, this);
+//            UserLoginStorage.saveLastName(_mLastName, this);
+//            UserLoginStorage.savePhone(_mPhoneN, this);
 
 
             UserInfo userInfo = new UserInfo(_mFirstName,

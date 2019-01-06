@@ -2,6 +2,7 @@ package com.example.mm.resturant.view.adaptor;
 
 
 import com.example.mm.resturant.R;
+import com.example.mm.resturant.models.data.DrinksInfo;
 import com.example.mm.resturant.models.data.FoodInfo;
 
 import java.util.ArrayList;
@@ -12,9 +13,8 @@ public class FoodFakeData {
 
     private static final List<FoodInfo> mRecipeFakeData = new ArrayList<FoodInfo>(){{
 
-
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120, 0, 30, 70));
-        add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120,  0, 30, 90));
+        add(new FoodInfo("KAMAAGE UDON", R.drawable.a, 20, 120,  0, 30, 90));
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120, 0, 30, 120));
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120,  0, 30, 111));
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120, 0, 30,80));
@@ -34,6 +34,29 @@ public class FoodFakeData {
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120,  0, 30, 142));
         add(new FoodInfo("KAMAAGE UDON", R.drawable.d, 20, 120, 0, 30,241));
     }};
+
+    
+    private static final List<DrinksInfo> mDrinksData = new ArrayList<DrinksInfo>(){{
+
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+        add(new DrinksInfo( R.drawable.kategori_minuman, "KAMAAGE UDON"));
+
+    }};
+
+    public static List<DrinksInfo> getmDrinksData() {
+        return mDrinksData;
+    }
 
     public static List<FoodInfo> getmRecipeFakeData() {
         return mRecipeFakeData;

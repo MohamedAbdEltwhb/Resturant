@@ -22,7 +22,7 @@ public class CustomDialog {
     private WaitlistAdapter guestAdapter;
     private WaitlistDBhelper waitlistDBhelper;
 
-    Context context;
+    private Context context;
 
 
     public CustomDialog(Context context, ImageView waitlist,
@@ -45,7 +45,7 @@ public class CustomDialog {
 
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
-        lp.width = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
         final Button add_guest =  dialog.findViewById(R.id.add_guest_btn);
@@ -54,7 +54,6 @@ public class CustomDialog {
         final EditText guest_name =  dialog.findViewById(R.id.guest_name);
         final EditText guest_number =  dialog.findViewById(R.id.guest_number);
 
-        final Toast toast = new Toast(context.getApplicationContext());
 
         add_guest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,8 +64,7 @@ public class CustomDialog {
 
                 if (name.length() == 0 || number.length() == 0)
                 {
-                    toast.setDuration(Toast.LENGTH_LONG);
-                    toast.show();
+
                 }
                 else
                 {
@@ -84,7 +82,6 @@ public class CustomDialog {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
-                toast.cancel();
             }
         });
 

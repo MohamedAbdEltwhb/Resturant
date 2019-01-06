@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants;
 import com.example.mm.resturant.models.data.UserInfo;
+import com.example.mm.resturant.models.sharedpreferenceshelber.UserLoginStorage;
 
 
 import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.EMAIL_6;
@@ -20,6 +21,8 @@ import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.R
 import static com.example.mm.resturant.models.SQLiteHelper.UserTable.Constants.TABLE_NAME;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
+
+    UserLoginStorage storage;
 
 
     public DataBaseHelper(Context context) {
@@ -97,6 +100,30 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         }else {
             return false;
+        }
+    }
+
+    public Cursor getUserId(String userEmail){
+
+        SQLiteDatabase database = getWritableDatabase();
+
+        String columns[] = {ID_1};
+        String selection = EMAIL_6 + " = ?";
+        String selectionArgs[] = {userEmail};
+
+        Cursor cursor = database.query(TABLE_NAME, columns, selection,
+                selectionArgs, null, null, null);
+
+        int cursorCount = cursor.getCount();
+        //String id = cursor.getString(Integer.valueOf(ID_1));
+        cursor.close();
+        database.close();
+
+        if (cursorCount > -1){
+            return cursor;
+
+        }else {
+            return null;
         }
     }
 

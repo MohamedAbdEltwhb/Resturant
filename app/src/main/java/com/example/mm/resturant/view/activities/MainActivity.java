@@ -11,13 +11,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.mm.resturant.R;
-import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferencesStorage;
+import com.example.mm.resturant.models.sharedpreferenceshelber.UserLoginStorage;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private CardView mRecipeCardView, mWaitlistesCardView, mDrinksCardView;
     private TextView mToolbarText;
-    private SharedPreferencesStorage mSharedPreferencesStorage;
+    private UserLoginStorage mSharedPreferencesStorage;
     private Toolbar mToolbar;
 
     @Override
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initObjects(){
-        mSharedPreferencesStorage = new SharedPreferencesStorage(MainActivity.this);
+        mSharedPreferencesStorage = new UserLoginStorage(MainActivity.this);
     }
 
     private void initViews() {

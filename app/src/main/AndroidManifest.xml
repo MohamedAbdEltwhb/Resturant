@@ -30,7 +30,8 @@
         <activity android:name=".view.activities.DrinksActivity" />
         <activity android:name=".view.activities.DetailsFoodActivity" />
         <activity android:name=".view.activities.ForgotPasswordActivity" />
-        <activity android:name=".view.activities.ConfirmPassword"></activity>
+        <activity android:name=".view.activities.ConfirmPassword" />
+        <activity android:name=".view.activities.OrderActivity"></activity>
     </application>
 
 </manifest>

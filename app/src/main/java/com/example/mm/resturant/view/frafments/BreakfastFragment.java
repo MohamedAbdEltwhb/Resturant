@@ -37,7 +37,6 @@ public class BreakfastFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_breakfast, container, false);
 
-
         mRecyclerView = view.findViewById(R.id.breakfastRecyclerView);
 
         mLinearLayoutManager = new LinearLayoutManager(getContext());
@@ -49,9 +48,9 @@ public class BreakfastFragment extends Fragment {
 
         mRecyclerView.setAdapter(mRecipeAdapter);
 
-
         return view;
-
     }
+
+
 
 }

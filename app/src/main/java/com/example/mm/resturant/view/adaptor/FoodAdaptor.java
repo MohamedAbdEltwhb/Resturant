@@ -61,7 +61,6 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
         holder.likesNumber.setText(String.valueOf(recipeInfo.getLikesNumber()));
         holder.sharesNumber.setText(String.valueOf(recipeInfo.getSharesNumber()));
 
-        //holder.plateImageView.setImageResource(recipeInfo.getPlateImage());
         Glide.with(mContext).load(recipeInfo.getPlateImage()).into(holder.plateImageView);
 
         holder.imageLikes.setImageResource(R.drawable.ic_favorite_grey);
@@ -89,18 +88,16 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
             }
         });
 
-//        holder.mCardView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(mContext, DetailsFoodActivity.class);
-//
-//                intent.putExtra(TEXT_FOOD_NAME, recipeInfo.getFoodName());
-//                intent.putExtra(MINUTES_NUMBER, recipeInfo.getMinutesNumber());
-//                intent.putExtra(PLATE_IMAGE_VIEW, recipeInfo.getPlateImage());
-//
-//                mContext.startActivity(intent);
-//            }
-//        });
+        holder.imageShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT, "Share your favorite food\n "
+                        + String.valueOf(recipeInfo.getFoodName()));
+                intent.setType("text/plain");
+                mContext.startActivity(Intent.createChooser(intent, "Send To"));
+            }
+        });
     }
 
     @Override
@@ -111,7 +108,7 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private CardView mCardView;
-        private ImageView plateImageView, imageLikes;
+        private ImageView plateImageView, imageLikes, imageShare;
         private MyTextView_Roboto_Bold textFoodName;
         private MyTextView_Roboto_Regular minutesNumber, nutritionsNumber, likesNumber, sharesNumber;
 
@@ -124,6 +121,7 @@ public class FoodAdaptor extends RecyclerView.Adapter<FoodAdaptor.ViewHolder>{
             nutritionsNumber = itemView.findViewById(R.id.nutritionsNumber);
             likesNumber = itemView.findViewById(R.id.likesNumber);
             sharesNumber = itemView.findViewById(R.id.sharesNumber);
+            imageShare = itemView.findViewById(R.id.imageShare);
 
             mCardView = itemView.findViewById(R.id.cardView5);
             mCardView.setOnClickListener(this);

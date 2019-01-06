@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -31,10 +30,11 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="72dp"
-            android:hint="Guest Name"
+            android:hint="@string/guest_name_dialog_new_guest"
             android:inputType="textPersonName|textCapWords"
-            android:textColor="#000"
-            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,10 +46,11 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:hint="00"
+            android:hint="@string/_00"
             android:inputType="number"
-            android:maxLength="1"
-            android:textColor="#000"
+            android:maxLength="2"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/back_btn"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,8 +68,8 @@
             android:layout_marginRight="24dp"
             android:background="@drawable/circle2"
             android:textAllCaps="false"
-            android:text="back"
-            android:textColor="#fff"
+            android:text="@string/dialog_back_button"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -81,8 +82,8 @@
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
             android:background="@drawable/circle2"
-            android:text="add guest"
-            android:textColor="#fff"
+            android:text="@string/add_guest_button"
+            android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -97,7 +98,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:textAppearance="?android:textAppearanceMedium"
-            android:text="Please enter the number  \n of visitors coming: "
+            android:text="@string/dialog_descrebtion"
             android:textColor="@color/colorOrange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

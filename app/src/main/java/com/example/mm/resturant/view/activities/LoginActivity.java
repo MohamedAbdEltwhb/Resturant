@@ -11,7 +11,7 @@ import com.example.mm.resturant.R;
 import com.example.mm.resturant.Util.InputValidation;
 import com.example.mm.resturant.customfonts.MyTextView_Roboto_Regular;
 import com.example.mm.resturant.models.SQLiteHelper.UserTable.DataBaseHelper;
-import com.example.mm.resturant.models.sharedpreferenceshelber.SharedPreferencesStorage;
+import com.example.mm.resturant.models.sharedpreferenceshelber.UserLoginStorage;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -34,13 +34,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private InputValidation mInputValidation;
     private DataBaseHelper mDataBaseHelper;
-    private SharedPreferencesStorage mSharedPreferencesStorage;
+    private UserLoginStorage mSharedPreferencesStorage;
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        mSharedPreferencesStorage = new SharedPreferencesStorage(LoginActivity.this);
+        mSharedPreferencesStorage = new UserLoginStorage(LoginActivity.this);
         if (mSharedPreferencesStorage.getEmail() != null){
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -155,6 +155,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 mSharedPreferencesStorage.putEmail(textMail);
                 mSharedPreferencesStorage.putPassword(textPassword);
 
+
+
                 Intent toMain = new Intent(this, MainActivity.class);
                 toMain.putExtra(EXTRA_EMILE, textMail);
 
@@ -177,7 +179,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void initObjects(){
         mDataBaseHelper = new DataBaseHelper(this);
-        mSharedPreferencesStorage = new SharedPreferencesStorage(LoginActivity.this);
+        mSharedPreferencesStorage = new UserLoginStorage(LoginActivity.this);
         mInputValidation = new InputValidation();
     }
 
